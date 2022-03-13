@@ -1,0 +1,31 @@
+{
+    "name": "yt01",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon --experimental-specifier-resolution=node app.js",
+        "format:fix": "prettier --write .",
+        "lint:fix": "eslint --fix ."
+    },
+    "author": "amaurel",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.11.0",
+        "eslint-config-prettier": "^8.5.0",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1",
+        "prisma": "^3.10.0"
+    },
+    "dependencies": {
+        "@prisma/client": "^3.10.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3"
+    },
+    "prisma": {
+        "schema": "db/schema.prisma",
+        "seed": "node db/seed.js"
+    }
+}
